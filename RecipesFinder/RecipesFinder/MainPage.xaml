@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecipesFinder.MainPage"
+             BackgroundColor="AliceBlue"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid ColumnSpacing="20" Padding="20,20,20,20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="0.25*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.6*"/>
+            <RowDefinition Height="0.6*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Frame Grid.Row="1" Grid.Column="1"
+               Grid.RowSpan="2" Grid.ColumnSpan="3"
+               VerticalOptions="CenterAndExpand" Padding="50"
+               CornerRadius="20"
+               BackgroundColor="LightSkyBlue"/>
+
+        <Image Grid.Row="0" Grid.Column="0"
+               Grid.ColumnSpan="2"
+               Aspect="AspectFill" Opacity="0.85"
+               Source="https://images.freeimages.com/images/large-previews/025/in-the-kitchen-1327655.jpg"/>
+
+        <Image Grid.Row="0" Grid.Column="2"
+               Grid.ColumnSpan="3" Grid.RowSpan="2"
+               Aspect="AspectFill" Opacity="0.85"
+               Source="https://images.freeimages.com/images/large-previews/7e6/mediterranean-food-1311330.jpg"/>
+
+        <Label Grid.Row="2" Grid.Column="0"
+               Grid.ColumnSpan="5"
+               HorizontalOptions="Center" VerticalOptions="Center"
+               Text="Recipe Finder" TextColor="Black"
+               FontSize="48" FontAttributes="Bold" TextDecorations="Underline"/>
+
+        <Frame Grid.Row="3" Grid.Column="0"
+               Grid.RowSpan="2" Grid.ColumnSpan="5"
+               CornerRadius="10"
+               BackgroundColor="LightGray"/>
+
+        <Button Grid.Row="3" Grid.Column="1"
+                Grid.ColumnSpan="3" 
+                VerticalOptions="Center" Padding="15"
+                BackgroundColor="Black"
+                Text="Search Recipes" TextColor="White" 
+                FontSize="Medium" FontAttributes="Bold"
+                Clicked="Search_Clicked"/>
+
+        <Button Grid.Row="4" Grid.Column="1"
+                Grid.ColumnSpan="3" 
+                VerticalOptions="Center" Padding="15"
+                BackgroundColor="Black"
+                Text="My Favourite" TextColor="White" 
+                FontSize="Medium" FontAttributes="Bold"
+                Clicked="Favourite_Clicked"/>
+
+        <Frame Grid.Row="5" Grid.Column="2"
+               Grid.RowSpan="2" Grid.ColumnSpan="2"
+               VerticalOptions="CenterAndExpand" Padding="90"
+               CornerRadius="200"
+               BackgroundColor="LightSlateGray"/>
+
+        <Image Grid.Row="5" Grid.Column="0"
+               Grid.ColumnSpan="3" Grid.RowSpan="2"
+               Aspect="AspectFill" Opacity="0.85"
+               Source="https://cdn.pixabay.com/photo/2016/11/29/08/24/bakery-1868396_960_720.jpg"/>
+
+        <Image Grid.Row="6" Grid.Column="3"
+               Grid.ColumnSpan="2"
+               Aspect="AspectFill" Opacity="0.85"
+               Source="https://images.freeimages.com/images/large-previews/5cb/salm-atilde-o-1330105.jpg"/>
+
+    </Grid>
+
+</ContentPage>

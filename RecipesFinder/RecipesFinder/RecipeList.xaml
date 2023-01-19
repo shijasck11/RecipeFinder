@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecipesFinder.RecipeList"
+             BackgroundColor="AliceBlue">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Recipe List" FontSize="Large"
+                   TextColor="Black" FontAttributes="Bold"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
+
+            <ListView x:Name="myList" 
+                      HasUnevenRows="True"
+                      ItemSelected="myList_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+
+                        <!--<ImageCell Text="{Binding title}" TextColor="Black"
+                                   Detail="{Binding likes}" DetailColor="SaddleBrown"
+                                   ImageSource="{Binding image}"
+                                   />-->
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="4">
+                                <Image Source="{Binding image}" WidthRequest="50" Aspect="AspectFill"/>
+                                <StackLayout Orientation="Vertical" 
+                                             HorizontalOptions="StartAndExpand" 
+                                             VerticalOptions="Center">
+                                    <Label Text="{Binding title}"  TextColor="Black"/>
+                                    <Label Text="{Binding likes, StringFormat='Likes count: {0}'}"  TextColor="SaddleBrown"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Detail" Clicked="Detail_Clicked"
+                                          CommandParameter="{Binding .}"/>
+                                <MenuItem Text="Save" Clicked="Save_Clicked"
+                                          CommandParameter="{Binding .}"/>
+
+                            </ViewCell.ContextActions>
+                        </ViewCell>
+                        
+
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+            <Button BackgroundColor="Black"
+                    Text="Back" TextColor="White" 
+                    FontAttributes="Bold" FontSize="12"
+                    Clicked="Back_Clicked" />
+
+            <!--<Button BackgroundColor="Black"
+                    Text="MyFavourite" TextColor="White"
+                    HorizontalOptions="Center"
+                    FontAttributes="Bold" FontSize="10" 
+                    Clicked="Favourite_Clicked"/>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

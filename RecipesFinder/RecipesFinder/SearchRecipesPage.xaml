@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecipesFinder.SearchRecipesPage"
+             BackgroundColor="AliceBlue">
+    
+    <!--<Grid ColumnSpacing="20" Padding="20,20,20,20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        
+        <Label x:Name="title" 
+               Grid.Row="0" Grid.Column="0"
+               Grid.ColumnSpan="4"
+               Text="Enter Food Ingredient" FontSize="32"
+               TextColor="Black" FontAttributes="Bold"
+               HorizontalOptions="Center"/>-->
+
+    <StackLayout  x:Name="stack" HorizontalOptions="Center" VerticalOptions="Center" >
+
+        <Label Text="Enter Food Ingredient"  FontSize="32"
+               TextColor="Black" FontAttributes="Bold"/>
+        <Label Text="Maximun enter 3 food ingredients"  FontSize="14"
+               TextColor="Black"/>
+        
+        <StackLayout x:Name="entry" HorizontalOptions="Center"
+                 VerticalOptions="Center">
+            <Entry x:Name="ingredient1" Placeholder="Ingredient 1"
+                   BackgroundColor="LightGray"
+                   TextColor="Gray"/>
+            <Entry x:Name="ingredient2" Placeholder="Ingredient 2"
+                   BackgroundColor="LightGray"
+                   TextColor="Gray" IsVisible="false"/>
+            <Entry x:Name="ingredient3" Placeholder="Ingredient 3"
+                   BackgroundColor="LightGray"
+                   TextColor="Gray" IsVisible="false"/>
+        </StackLayout>
+
+
+        <!--<Button Grid.Row="1" Grid.Column="0"
+                Grid.ColumnSpan="2" VerticalOptions="Start"
+                FontAttributes="Bold" Opacity="0.7"
+                BackgroundColor="Black" TextColor="White"
+                Text="Pick Image" Clicked="PickImage_Clicked"/>
+        
+        <Button Grid.Row="1" Grid.Column="2"
+                Grid.ColumnSpan="2" VerticalOptions="Start"
+                FontAttributes="Bold" Opacity="0.7"
+                BackgroundColor="Black" TextColor="White"
+                Text="Take Image" Clicked="TakeImage_Clicked"/>
+        
+        <Image x:Name="resultImage" 
+               Grid.Row="2" Grid.Column="0"
+               Grid.ColumnSpan="4" BackgroundColor="LightGray"
+               Aspect="AspectFill"/>
+
+        <Button Grid.Row="3" Grid.Column="2"
+                BackgroundColor="DarkGreen" VerticalOptions="End"
+                Text="Upload" TextColor="White" 
+                FontAttributes="Bold" FontSize="10"
+                Clicked="Upload_Clicked"/>-->
+
+        <!--<Button Grid.Row="3" Grid.Column="3"
+                BackgroundColor="Black" VerticalOptions="End"
+                Text="Cancel" TextColor="White" 
+                FontAttributes="Bold" FontSize="10"
+                Clicked="Cancel_Clicked"/>-->
+        
+        <StackLayout x:Name="buttons">
+            <Button BackgroundColor="Black"
+                    Text="+ Add more ingredient" TextColor="White" 
+                    FontAttributes="Bold" FontSize="10"
+                    Clicked="More_Clicked"/>
+
+            <Button BackgroundColor="Black"
+                    Text="Submit" TextColor="White" 
+                    FontAttributes="Bold" FontSize="10"
+                    Clicked="Submit_Clicked"/>
+
+            <Button BackgroundColor="Black"
+                    Text="Cancel" TextColor="White" 
+                    FontAttributes="Bold" FontSize="10"
+                    Clicked="Cancel_Clicked"/>
+        </StackLayout>
+        
+    </StackLayout>
+
+</ContentPage>
